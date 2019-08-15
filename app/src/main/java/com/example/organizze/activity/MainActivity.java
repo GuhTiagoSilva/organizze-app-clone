@@ -7,15 +7,18 @@ import android.view.View;
 import com.example.organizze.R;
 import com.example.organizze.activity.LoginActivity;
 import com.example.organizze.activity.SignInActivity;
+import com.example.organizze.config.FirebaseConfiguration;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
 public class MainActivity extends IntroActivity {
 
+    private FirebaseAuth authentication;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         setButtonNextVisible(false);
         setButtonBackVisible(false);
@@ -30,6 +33,11 @@ public class MainActivity extends IntroActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        verifyLoggedUser();
+        super.onStart();
+    }
 
     public void enter(View view){
         startActivity(new Intent(this, LoginActivity.class));
@@ -37,5 +45,17 @@ public class MainActivity extends IntroActivity {
 
     public void createAccount(View view){
         startActivity(new Intent(this, SignInActivity.class));
+    }
+
+    public void verifyLoggedUser(){
+        authentication = FirebaseConfiguration.getFirebaseAuthentication();
+        //authentication.signOut();
+        if(authentication.getCurrentUser()!=null){
+            openMainPage();
+        }
+    }
+
+    public void openMainPage(){
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 }

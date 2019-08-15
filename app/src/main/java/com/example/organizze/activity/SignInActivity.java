@@ -58,7 +58,7 @@ public class SignInActivity extends AppCompatActivity {
                         }
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "Preencha os campos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "Preencha os campos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -70,7 +70,8 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Sucesso ao cadastrar usuário", Toast.LENGTH_SHORT).show();
+
+                    finish();
                 } else {
                     String exception = "";
 
@@ -89,7 +90,7 @@ public class SignInActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    Toast.makeText(getApplicationContext(), exception, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, exception, Toast.LENGTH_SHORT).show();
                 }
             }
         });
