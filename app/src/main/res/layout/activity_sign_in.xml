@@ -17,15 +17,15 @@
         android:text="Crie sua conta grátis"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="350dp"
+        android:id="@+id/etName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -33,17 +33,18 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_contact_24dp"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="350dp"
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -51,17 +52,18 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email  "
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="350dp"
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -69,28 +71,31 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Senha "
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="350dp"
+        android:id="@+id/btSignIn"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/colorPrimary"
         android:text="Cadastrar"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/textView10"
@@ -105,6 +110,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
