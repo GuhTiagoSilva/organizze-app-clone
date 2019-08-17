@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,12 +23,35 @@
 
     <include layout="@layout/content_principal" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        fab:menu_icon="@drawable/ic_add_white_24dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorAccent"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_expense"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_add_white_24dp"
+            app:fab_label="Despesa"
+            fab:fab_size="mini"
+            fab:fab_colorNormal="@color/colorPrimaryExpense"
+            android:layout_height="wrap_content" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_income"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_add_white_24dp"
+            app:fab_label="Receita"
+            fab:fab_colorNormal="@color/colorPrimaryIncome"
+            fab:fab_size="mini"
+            android:layout_height="wrap_content" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

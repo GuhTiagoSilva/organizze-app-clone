@@ -4,4 +4,19 @@
     <color name="colorPrimaryDark">#00B2BC</color>
     <color name="colorAccent">#FF706A</color>
     <color name="color_text_intros">#CFC8C8</color>
+
+
+    <!-- Expense colors! !-->
+    <color name="colorPrimaryExpense">#FF706A</color>
+    <color name="colorPrimaryDarkExpense">#E66560</color>
+    <color name="colorAccentExpense">#FF706A</color>
+
+    <!-- Income colors! !-->
+    <color name="colorPrimaryIncome">#00D39E</color>
+    <color name="colorPrimaryDarkIncome">#00BE8B</color>
+    <color name="colorAccentIncome">#00D39E</color>
+
+
+
+
 </resources>
