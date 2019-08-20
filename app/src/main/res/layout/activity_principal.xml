@@ -36,6 +36,7 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_expense"
+            android:onClick="addExpense"
             android:layout_width="wrap_content"
             android:src="@drawable/ic_add_white_24dp"
             app:fab_label="Despesa"
@@ -45,6 +46,7 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_income"
+            android:onClick="addIncome"
             android:layout_width="wrap_content"
             android:src="@drawable/ic_add_white_24dp"
             app:fab_label="Receita"

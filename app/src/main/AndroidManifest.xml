@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.ExpenseActivity" android:theme="@style/expenseTheme"></activity>
+        <activity android:name=".activity.IncomeActivity" android:theme="@style/incomeTheme"/>
         <activity
             android:name=".activity.PrincipalActivity"
             android:label="@string/title_activity_principal"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.SignInActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity
