@@ -50,6 +50,7 @@ public class MainActivity extends IntroActivity {
     public void verifyLoggedUser(){
         authentication = FirebaseConfiguration.getFirebaseAuthentication();
         //authentication.signOut();
+        //authentication.signOut();
         if(authentication.getCurrentUser()!=null){
             openMainPage();
         }
