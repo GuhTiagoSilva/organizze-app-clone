@@ -30,7 +30,6 @@ public class MainActivity extends IntroActivity {
         addSlide(new FragmentSlide.Builder().background(android.R.color.white).fragment(R.layout.intro_sign_in).build());
 
 
-
     }
 
     @Override
@@ -39,24 +38,24 @@ public class MainActivity extends IntroActivity {
         super.onStart();
     }
 
-    public void enter(View view){
+    public void enter(View view) {
         startActivity(new Intent(this, LoginActivity.class));
     }
 
-    public void createAccount(View view){
+    public void createAccount(View view) {
         startActivity(new Intent(this, SignInActivity.class));
     }
 
-    public void verifyLoggedUser(){
+    public void verifyLoggedUser() {
         authentication = FirebaseConfiguration.getFirebaseAuthentication();
         //authentication.signOut();
         //authentication.signOut();
-        if(authentication.getCurrentUser()!=null){
+        if (authentication.getCurrentUser() != null) {
             openMainPage();
         }
     }
 
-    public void openMainPage(){
+    public void openMainPage() {
         startActivity(new Intent(this, PrincipalActivity.class));
     }
 }

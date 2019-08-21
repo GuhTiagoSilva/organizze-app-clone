@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -24,6 +25,8 @@
             android:hint="R$0,00"
             android:inputType="numberDecimal"
             android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white"
             android:textSize="30sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,6 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Descrição" />
@@ -62,9 +66,10 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="22/07/2019" />
+            android:hint="Data " />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -81,13 +86,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Categoria" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabSave"
+        android:onClick="saveExpense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
