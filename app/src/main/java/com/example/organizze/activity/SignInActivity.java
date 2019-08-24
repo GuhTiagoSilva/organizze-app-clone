@@ -40,6 +40,9 @@ public class SignInActivity extends AppCompatActivity {
         password = findViewById(R.id.etPassword);
         btSignIn = findViewById(R.id.btSignIn);
 
+
+
+
         btSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
