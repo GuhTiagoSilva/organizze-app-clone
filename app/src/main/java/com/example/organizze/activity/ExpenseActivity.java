@@ -58,6 +58,7 @@ public class ExpenseActivity extends AppCompatActivity {
             updateExpense(updatedExpense);
 
             movimentation.save(chosenDate);
+            finish();
         }
     }
     public Boolean validateExpenseFields() {

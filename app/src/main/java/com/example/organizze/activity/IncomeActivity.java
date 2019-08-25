@@ -59,6 +59,7 @@ public class IncomeActivity extends AppCompatActivity {
             updateIncome(updatedIncome);
 
             movimentation.save(chosenDate);
+            finish();
         }
     }
 

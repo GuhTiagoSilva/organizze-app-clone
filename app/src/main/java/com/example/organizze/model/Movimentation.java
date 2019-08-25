@@ -8,6 +8,7 @@ import com.google.firebase.database.DatabaseReference;
 
 public class Movimentation {
 
+    private String key;
     private String category;
     private String date;
     private String description;
@@ -25,6 +26,14 @@ public class Movimentation {
 
 
 
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getCategory() {
